@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<label for="hotels">Hotels:</label>
+<!-- for attribute links the label with the element with the matching id -->
+<select id="hotels">
+    {% for hotel in hotels %}
+    <option value="{{hotel.name}}">{{hotel.name}}</option>
+    {% endfor %}
+</select>
+<label for="restaurants">Restaurants:</label>
+<select id="restaurants">
+    {% for restaurant in restaurants %}
+    <option value="{{restaurant.name}}">{{restaurant.name}}</option> <!-- what's selected form our list of options is set to value (restaurant.name = whatever_selected) -->
+    {% endfor %}
+</select>
+<label for="activities">Activities:</label> 
+<select id="activities">
+    {% for activity in activities %}
+    <option value="{{activity.name}}">{{activity.name}}</option>
+    {% endfor %}
+</select>
+{% endblock %}
