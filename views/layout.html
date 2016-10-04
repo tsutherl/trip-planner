@@ -3,9 +3,20 @@
 <head>
     <title></title>
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/basic.css" rel="stylesheet">
 </head>
 <body>
-<h1>HELLO WORLD</h1>
-{% block content %}{% endblock %}
+<nav>
+  <div id='nav-inner'>
+    <h1>Trip Planner</h1>
+    <ul>
+      <li><a class='active'>Home</a></li>
+      <li><a>About</a></li>
+      <li><a>Contact</a></li>
+  </div>
+</nav>
+<div id='page-cont'>
+  {% block content %}{% endblock %}
+</div>
 </body>
 </html>

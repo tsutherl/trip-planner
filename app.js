@@ -1,4 +1,4 @@
-//must deal with crazy node modules soo many 
+//must deal with crazy node modules soo many
 //also do we just normally install client module stuff into json or does it go into it's own section like dev dep.
 
 
@@ -27,7 +27,7 @@ app.set('view engine', 'html');
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'))
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'))
 // statically serve public folder
-app.use('/public', express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 
 
