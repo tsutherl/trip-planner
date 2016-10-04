@@ -9,7 +9,6 @@ var Activity = models.Activity;
 
 module.exports = router;
 
-
 router.get('/', function (req, res, next) {
     var promHot = Hotel.findAll({});
     var promRest = Restaurant.findAll({});

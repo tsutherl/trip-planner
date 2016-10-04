@@ -1,23 +1,59 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<label for="hotels">Hotels:</label>
-<!-- for attribute links the label with the element with the matching id -->
-<select id="hotels">
-    {% for hotel in hotels %}
-    <option value="{{hotel.name}}">{{hotel.name}}</option>
-    {% endfor %}
-</select>
-<label for="restaurants">Restaurants:</label>
-<select id="restaurants">
-    {% for restaurant in restaurants %}
-    <option value="{{restaurant.name}}">{{restaurant.name}}</option> <!-- what's selected form our list of options is set to value (restaurant.name = whatever_selected) -->
-    {% endfor %}
-</select>
-<label for="activities">Activities:</label> 
-<select id="activities">
-    {% for activity in activities %}
-    <option value="{{activity.name}}">{{activity.name}}</option>
-    {% endfor %}
-</select>
+<div id='map-canvas'>
+</div>
+<div id='form1'>
+  <form>
+    <div class='form-group'>
+      <label for="hotels">Hotels:</label>
+      <!-- for attribute links the label with the element with the matching id -->
+      <div class='select-btn'>
+        <select id="hotels" class='form-control'>
+            {% for hotel in hotels %}
+            <option value="{{hotel.name}}">{{hotel.name}}</option>
+            {% endfor %}
+        </select>
+        <button class='btn'>Select</button>
+      </div>
+    </div>
+    <div class='form-group'>
+      <label for="restaurants">Restaurants:</label>
+      <div class='select-btn'>
+        <select id="restaurants" class='form-control'>
+            {% for restaurant in restaurants %}
+            <option value="{{restaurant.name}}">{{restaurant.name}}</option> <!-- what's selected form our list of options is set to value (restaurant.name = whatever_selected) -->
+            {% endfor %}
+        </select>
+        <button class='btn'>Select</button>
+      </div>
+    </div>
+    <div class='form-group'>
+      <label for="activities">Activities:</label>
+      <div class='select-btn'>
+        <select id="activities" class='form-control'>
+            {% for activity in activities %}
+            <option value="{{activity.name}}">{{activity.name}}</option>
+            {% endfor %}
+        </select>
+        <button class='btn'>Select</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div id='day-2'>
+  <h2>Day 2</h2>
+  <div id='num-btns'>
+    <button class='btn'>1</button>
+    <button class='btn selected'>2</button>
+    <button class='btn'>3</button>
+    <button class='btn'>+</button>
+  </div>
+  <h3>My Hotel</h3>
+  <li>selected hotel</li>
+  <h3>My Restaurant</h3>
+  <li>selected restaurant</li>
+  <h3>My Activity</h3>
+  <li>selected activity</li>
+</div>
 {% endblock %}
