@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div id='map'>
+<div id='map-canvas'>
 </div>
 <div id='form1'>
   <form>
@@ -14,7 +14,7 @@
             <option value="{{hotel.name}}">{{hotel.name}}</option>
             {% endfor %}
         </select>
-        <button class='btn'>Go!</button>
+        <button class='btn'>Select</button>
       </div>
     </div>
     <div class='form-group'>
@@ -25,7 +25,7 @@
             <option value="{{restaurant.name}}">{{restaurant.name}}</option> <!-- what's selected form our list of options is set to value (restaurant.name = whatever_selected) -->
             {% endfor %}
         </select>
-        <button class='btn'>Go!</button>
+        <button class='btn'>Select</button>
       </div>
     </div>
     <div class='form-group'>
@@ -36,7 +36,7 @@
             <option value="{{activity.name}}">{{activity.name}}</option>
             {% endfor %}
         </select>
-        <button class='btn'>Go!</button>
+        <button class='btn'>Select</button>
       </div>
     </div>
   </form>
@@ -45,12 +45,15 @@
   <h2>Day 2</h2>
   <div id='num-btns'>
     <button class='btn'>1</button>
-    <button class='btn'>2</button>
+    <button class='btn selected'>2</button>
     <button class='btn'>3</button>
     <button class='btn'>+</button>
   </div>
   <h3>My Hotel</h3>
+  <li>selected hotel</li>
   <h3>My Restaurant</h3>
+  <li>selected restaurant</li>
   <h3>My Activity</h3>
+  <li>selected activity</li>
 </div>
 {% endblock %}

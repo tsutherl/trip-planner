@@ -25,6 +25,10 @@ nav {
         padding: 1rem; }
       nav ul li a.active {
         background: #004141; }
+      nav ul li a:hover {
+        color: white;
+        text-decoration: none;
+        box-shadow: inset 0px 0px 32px -3px white; }
     nav ul li {
       border-left: #fff solid 1px; }
     nav ul li:last-child {
@@ -54,7 +58,7 @@ nav {
   display: flex;
   margin: auto;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
   height: 700px; }
@@ -62,10 +66,10 @@ nav {
     border-radius: 5px;
     box-shadow: 0px 10px 27px -13px rgba(51, 51, 51, 0.8); }
 
-#map {
+#map-canvas {
   width: 65%;
   height: 700px;
-  background: #333; }
+  border: #86D0D2 solid 2px; }
 
 #nav-inner {
   max-width: 1170px;
@@ -78,16 +82,32 @@ nav {
 #day-2 {
   background: #86D0D2;
   padding: 15px;
-  width: 32%; }
+  width: 32%;
+  margin: 2em 0 0; }
   #day-2 h2 {
     margin: 0 0 1rem; }
+  #day-2 li {
+    list-style: none;
+    background: url("../img/arrow2.png") no-repeat left;
+    background-size: 20px 17px;
+    display: block;
+    padding-left: 28px; }
 
 #num-btns {
   width: calc(100% + 30px);
-  padding: 5px 15px;
+  padding: 10px 15px;
   margin-left: -15px;
   display: flex;
   justify-content: flex-start;
   background: teal; }
+  #num-btns button {
+    font-size: 1.15em;
+    background: #004141;
+    color: white;
+    border: white solid 1px; }
+  #num-btns button.selected {
+    background: white;
+    color: #004141;
+    border: #004141 solid 1px; }
   #num-btns button + button {
     margin-left: .75rem; }
